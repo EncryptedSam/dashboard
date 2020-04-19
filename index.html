@@ -3,34 +3,272 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="frameworks/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./frameworks/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+        <script src="./lib/jquery-3.5.0/jquery-3.5.0.min.js"></script>
+        <script src="./frameworks/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./styles/stylesheet.css">
     </head>
 <body>
 
 <div id="sideBar" class="sidebar">
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+
+    <div class="p-2" style="background-color: #EEEEEE;">
+        <img src="./images/companylogo.png" class="mx-auto d-block" alt="Responsive image">
+    </div>
+
+    
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item ">
+                <a class="nav-link d-flex justify-content-between align-items-center p-3 rounded" href="#">
+                    <img src="./images/profile-pic.jpg" style="width: 18%; border-radius: 50%;" alt="profile pic">
+                    <span>Ravichandran M</span>
+                    <i class="fa fa-caret-down"></i>
+                </a>
+            </li>
+            <div class="hr-line"></div>
+            
+            <li class="nav-item divider"></li>
+
+            <li class="nav-item">
+                <a class="nav-link d-flex align-items-center p-3 rounded" href="#">
+                    <i class="fa fa-tachometer mr-4"></i>
+                    <div class="d-flex flex-fill justify-content-between  align-items-center">
+                        <span>Dashboard</span>
+                        <i class="fa"></i>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link d-flex  align-items-center p-3 rounded" href="#">
+
+                    <i class="fa fa-th mr-4"></i>
+                    <div class="d-flex flex-fill justify-content-between  align-items-center">
+                        <span>Products</span>
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link d-flex align-items-center p-3 rounded" href="#">
+                    <i class="fa fa-handshake-o mr-4"></i>
+                    <div class="d-flex flex-fill justify-content-between  align-items-center">
+                        <span>Partners</span>
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link d-flex align-items-center p-3 rounded" href="#">
+                    <i class="fa fa-users mr-4"></i>
+                    <div class="d-flex flex-fill justify-content-between  align-items-center">
+                        <span>Users</span>
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link d-flex align-items-center p-3 rounded" href="#">
+                    <i class="fa fa-link mr-4"></i>
+                    <div class="d-flex flex-fill justify-content-between  align-items-center">
+                        <span>Claims</span>
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="color-overlay"></div>
 </div>
 
 <div id="main">
 
-    <div class="flex-box">
-        <div class="flex-row">
-            <button class="btn" onclick="toggleNav()"><i class="glyphicon glyphicon-cog"></i></button>
-            <h3 class="page-title">DashBoard</h3>
+    <div class="d-flex align-items-center">
+
+        <div class="mr-auto p-2">
+            <button class="btn btn-outline-light btn-circle btn-lg" onclick="toggleNav()">
+                <i class="fa fa-ellipsis-v" style="font-size: medium;color: black;"></i>
+            </button>      
+            <p style="font-size: large;font-weight: bold; display: inline;">DashBoard</p>
         </div>
-        <div class="flex-row">
-            <span>Sampath</span>
-            <span>Kumar</span>
+        
+        <div class="p-2">
+            <div class="buttons-container">
+                <button>EN</button><button>HN</button><button>KN</button><button>TN</button>
+            </div>
+            <div class="search-container">
+                <input type="text" class="search" placeholder="Search">
+                <button class="btn btn-outline-light btn-circle btn-lg">
+                    <i class="fa fa-search" style="font-size: medium;color: black;"></i>
+                </button>      
+            </div>
+            <div class="icons-container">
+                <i class="fa fa-tachometer" style="font-size: large;color: black;"></i>
+                <div class="notify">
+                    <i class="fa fa-bell" style="font-size: large;color: black;" ></i>
+                    <span>5</span>
+                </div>
+                <i class="fa fa-user" style="font-size: large;color: black;"></i>
+            </div>
+
         </div>
+
     </div>
 
-</div>
+    <div class="container-fluid mt-5">
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-lg-3 mb-5 ">
+            <div class="card" style="height: 100%;"> 
+                <div class="card-body">
+                    <div class="d-flex bd-highlight align-items-baseline card-body-icon">
+                        <div class="p-2 flex-fill bd-highlight">
+                            <div>
+                                <i class="fa fa-tasks p-4 rounded icon" style="background-color: #FC9208;"></i>
+                            </div>
+                        </div>
+                        <div class="p-2 flex-fill bd-highlight">
+                            <h5 class="card-title" >Account Summary</h5>
+                        </div>
+                    </div>
+                    <a href="#" style="color:#6c757d;font-size: 14px;">Click here to view Account Summary</a>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-lg-3 mb-5">
+            <div class="card" style="height: 100%;"> 
+                <div class="card-body">
+                    <div class="d-flex bd-highlight align-items-end card-body-icon">
+                        <div class="p-2 flex-fill bd-highlight">
+                            <div >
+                                <i class="fa fa-bar-chart  p-4 rounded icon" style="background-color: #4FA953;"></i>
+                            </div>
+                        </div>
+                        <div class="p-2 flex-fill bd-highlight">
+                            <h5 class="card-title" >Sales Summary</h5>
+                        </div>
+                    </div>
+                    <a href="#" style="color:#6c757d; font-size: 14px;">Click here to view Sales Summary</a>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-lg-3 mb-5">
+            <div class="card" style="height: 100%;"> 
+                <div class="card-body">
+                    <div class="d-flex bd-highlight align-items-end card-body-icon">
+                        <div class="p-2 flex-fill bd-highlight">
+                            <div >
+                                <i class="fa fa-calendar  p-4 rounded icon" style="background-color: #E8423E;"></i>
+                            </div>
+                        </div>
+                        <div class="p-2 flex-fill bd-highlight">
+                            <h5 class="card-title" >Calendar</h5>
+                        </div>
+                    </div>
+                    <a href="#" style="color:#6c757d; font-size: 14px;">Click here to view Calendar</a>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-lg-3 mb-5">
+            <div class="card" style="height: 100%;"> 
+                <div class="card-body">
+                    <div class="d-flex bd-highlight align-items-baseline card-body-icon">
+                        <div class="p-2 flex-fill bd-highlight">
+                            <div>
+                                <i class="fa fa-bell  p-4 rounded icon" style="background-color: #0BB4CA;" ></i>
+                            </div>
+                        </div>
+                        <div class="p-2 flex-fill bd-highlight">
+                            <h5 class="card-title" >My Alerts & Quick Links</h5>
+                        </div>
+                    </div>
+                    <a href="#" style="color:#6c757d; font-size: 14px;">Click here to view Alerts and Notifications</a>
+                </div>
+              </div>
+          </div>
+        </div>
 
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="summary-icon" >
+                        <i class="fa fa-bar-chart"></i>
+                        <h5 style="display: inline-block;" >Sales Summary</h5>
+                    </div>
+                    <div class="container fluid">
+                        <div class="row grid-divider">
+                            <div class="col-md-6">
+                                <form>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6">
+                                            <label for="lineOfBusiness">Line of Business</label><br>
+                                            <select class="form-control-style" name="lineOfBusiness" id="lineOfBusiness">
+                                                <option value="" selected disabled>Select Here</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="product">Product</label><br>
+                                            <select class="form-control-style" name="product" id="product">
+                                                <option value="" selected disabled>Select Here</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+
+                                        <div class="col-sm-6">
+                                            <label for="from">From</label><br>
+                                            <span class="input-group-append">
+                                                <input type="date" class="form-control-style" id="from" placeholder="Click Here">
+                                                <i class="fa fa-calendar-o"></i>
+                                            </span>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <label for="to">To</label><br>
+                                            <span class="input-group-append">
+                                                <input type="date" class="form-control-style" id="to" placeholder="Click Here">
+                                                <i class="fa fa-calendar-o"></i>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6">
+                                            <label for="interval">Interval</label><br>
+                                            <select class="form-control-style" name="interval" id="interval">
+                                                <option value="" selected disabled>Select Here</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-6 d-flex align-items-end ">
+                                            <button type="button" class="btn btn-primary btn-sm btn-custom-color px-3 mr-3">Submit</button>
+                                            <button type="button" class="btn btn-primary btn-sm btn-custom-color px-3">Reset</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div id="totalSales">
+                                    <h5 class="mr-3">Total Sales</h5>
+                                    <span class="bg-primary p-3 h3 rounded">13,42,987</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <canvas id="bar-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+
+      </div>
+
+
+    <!-- <img src="./images/img.png" width=""> -->
+</div>
 <script src="./scripts/main.js"></script>
+<script defer src="./scripts/canvas.js"></script>
    
 </body>
 </html> 
