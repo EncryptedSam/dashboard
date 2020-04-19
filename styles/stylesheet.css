@@ -246,6 +246,7 @@ div.hr-line {
         top: 0;
         bottom: 0;
         margin: 20px 0px;
+        height:100%;
     }
 
 }
